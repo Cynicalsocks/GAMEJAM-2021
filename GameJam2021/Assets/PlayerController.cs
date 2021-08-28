@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
     {
         if (fireIntervalCounter < Time.time)
         {
-            ProjectileSpawner.Instance.SpawnProjectile("Basic_Projectile", new Vector3(transform.position.x, transform.position.y, 0f), Quaternion.identity, dir, 40f);
+            ProjectileSpawner.Instance.SpawnProjectile("Basic_Projectile", new Vector3(transform.position.x, transform.position.y, 0f) + (dir * 1.5f), Quaternion.identity, dir, 40f);
 
             // Play blast sound
             //AudioManager.Instance.Play2DSound("Blast_01");

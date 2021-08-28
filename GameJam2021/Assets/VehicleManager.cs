@@ -19,16 +19,18 @@ public class VehicleManager : MonoBehaviour
     }
     #endregion
 
-    [SerializeField] Vehicle firstvehicle;
-
-    public List<Vehicle> listVehicles;
+    public List<Vehicle> listBalls;
 
     public Transform playerTransform;
     public Rigidbody2D playerRigidbody2D;
 
     private void Start()
     {
-        listVehicles = new List<Vehicle>();
-        listVehicles.Add(firstvehicle);
+        listBalls = new List<Vehicle>();
+    }
+
+    public void AddBall(Ball ball)
+    {
+        listBalls.Add(ball.thisVehicle);
     }
 }

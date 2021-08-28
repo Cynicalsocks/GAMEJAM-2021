@@ -71,11 +71,5 @@ public class Vehicle : MonoBehaviour
     public void Move(Vector2 force)
     {
         rigidBody.AddForce(force, ForceMode2D.Force);
-
-        // get its cross product, which is the axis of rotation to get from one vector to the other
-        Vector3 cross = Vector3.Cross(transform.up, rigidBody.velocity);
-
-        // Rotate to face target
-        transform.Rotate(transform.forward, cross.z);
     }
 }

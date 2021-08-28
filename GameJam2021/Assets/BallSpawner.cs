@@ -13,12 +13,11 @@ public class BallSpawner : MonoBehaviour
 
     [SerializeField] GameObject ball_prefab;
 
-    float timeSinceLastSpawn = 0f;
+    float timeSinceLastSpawn = SPAWN_INTERVAL;
 
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
